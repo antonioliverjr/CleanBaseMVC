@@ -33,9 +33,14 @@ namespace CleanBase.Domain.Entities
             DomainExceptionValidation.When(string.IsNullOrEmpty(description), "Name é invalido. Name é required");
             DomainExceptionValidation.When(description.Length < 5, "Name invalido. Name deve conter no mínimo 5 caracteres.");
             DomainExceptionValidation.When(price < 0, "Price invalido. Deve ser diferente de zero.");
-            DomainExceptionValidation.When(stock < 0, "Price invalido. Deve ser diferente de zero.");
-            DomainExceptionValidation.When(image.Length > 250,
+            DomainExceptionValidation.When(stock < 0, "Stock invalido. Deve ser diferente de zero.");
+            DomainExceptionValidation.When(image?.Length > 250,
                 "Nome da Image invalido. Deve conter no máximo 250 caracteres.");
+            Name = name;
+            Description = description;
+            Price = price;
+            Stock = stock;
+            Image = image;
         }
 
         public int CategoryId { get; set; }
