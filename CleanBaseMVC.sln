@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBase.Domain", "CleanBase.Domain\CleanBase.Domain.csproj", "{A29FAA37-828B-4E2D-B60D-A302EB09E7B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanBase.Domain", "CleanBase.Domain\CleanBase.Domain.csproj", "{A29FAA37-828B-4E2D-B60D-A302EB09E7B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBase.Application", "CleanBase.Application\CleanBase.Application.csproj", "{0418D4AF-85D8-4B36-985A-BCADF54DFD31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanBase.Application", "CleanBase.Application\CleanBase.Application.csproj", "{0418D4AF-85D8-4B36-985A-BCADF54DFD31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBase.Infra.Data", "CleanBase.Infra.Data\CleanBase.Infra.Data.csproj", "{5F387835-1EE8-45E7-AA31-C7EDBEFB81DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanBase.Infra.Data", "CleanBase.Infra.Data\CleanBase.Infra.Data.csproj", "{5F387835-1EE8-45E7-AA31-C7EDBEFB81DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBase.Infra.IoC", "CleanBase.Infra.IoC\CleanBase.Infra.IoC.csproj", "{ACC6E8C6-BF1A-41A2-9453-6F87495BC5A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanBase.Infra.IoC", "CleanBase.Infra.IoC\CleanBase.Infra.IoC.csproj", "{ACC6E8C6-BF1A-41A2-9453-6F87495BC5A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBase.WebUI", "CleanBase.WebUI\CleanBase.WebUI.csproj", "{B185D0E8-EA53-4598-BD83-92E6D32EECAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanBase.WebUI", "CleanBase.WebUI\CleanBase.WebUI.csproj", "{B185D0E8-EA53-4598-BD83-92E6D32EECAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBase.Domain.Tests", "CleanBase.Domain.Tests\CleanBase.Domain.Tests.csproj", "{15D21844-ED1B-402B-A8CA-7159046FDADE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B185D0E8-EA53-4598-BD83-92E6D32EECAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B185D0E8-EA53-4598-BD83-92E6D32EECAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B185D0E8-EA53-4598-BD83-92E6D32EECAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15D21844-ED1B-402B-A8CA-7159046FDADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15D21844-ED1B-402B-A8CA-7159046FDADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15D21844-ED1B-402B-A8CA-7159046FDADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15D21844-ED1B-402B-A8CA-7159046FDADE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
