@@ -12,8 +12,8 @@ namespace CleanBase.Infra.Data.EntitiesConfiguration
             builder.Property(p => p.Name).HasMaxLength(100).IsRequired();
             builder.HasData(
                 new Category(1, "Material Escolar"),
-                new Category(1, "Material Eletrônico"),
-                new Category(1, "Material Informática")
+                new Category(2, "Material Eletrônico"),
+                new Category(3, "Material Informática")
             );
         }
     }
