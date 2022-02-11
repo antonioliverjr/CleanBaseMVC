@@ -4,9 +4,11 @@ using CleanBase.Application.Services;
 using CleanBase.Domain.Interfaces;
 using CleanBase.Infra.Data.Context;
 using CleanBase.Infra.Data.Repositories;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace CleanBase.Infra.IoC
 {
@@ -25,6 +27,9 @@ namespace CleanBase.Infra.IoC
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
+
+            var myHandlers = AppDomain.CurrentDomain.Load("CleanBase.Application");
+            services.AddMediatR(myHandlers);
 
             return services;
         }
