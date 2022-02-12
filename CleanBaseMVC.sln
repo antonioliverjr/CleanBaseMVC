@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanBase.Infra.IoC", "Clea
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanBase.WebUI", "CleanBase.WebUI\CleanBase.WebUI.csproj", "{B185D0E8-EA53-4598-BD83-92E6D32EECAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBase.Domain.Tests", "CleanBase.Domain.Tests\CleanBase.Domain.Tests.csproj", "{15D21844-ED1B-402B-A8CA-7159046FDADE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanBase.Domain.Tests", "CleanBase.Domain.Tests\CleanBase.Domain.Tests.csproj", "{15D21844-ED1B-402B-A8CA-7159046FDADE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBase.API", "CleanBase.API\CleanBase.API.csproj", "{59FD5879-0F8A-4BB8-8C3D-4827CD34B3DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{15D21844-ED1B-402B-A8CA-7159046FDADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15D21844-ED1B-402B-A8CA-7159046FDADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15D21844-ED1B-402B-A8CA-7159046FDADE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59FD5879-0F8A-4BB8-8C3D-4827CD34B3DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59FD5879-0F8A-4BB8-8C3D-4827CD34B3DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59FD5879-0F8A-4BB8-8C3D-4827CD34B3DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59FD5879-0F8A-4BB8-8C3D-4827CD34B3DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
