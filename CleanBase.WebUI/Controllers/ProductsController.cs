@@ -1,5 +1,6 @@
 ﻿using CleanBase.Application.DTOs;
 using CleanBase.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace CleanBase.WebUI.Controllers
 {
+    [Authorize]
     public class ProductsController : Controller
     {
         private readonly IProductService _productService;
@@ -84,6 +86,7 @@ namespace CleanBase.WebUI.Controllers
             return View(product);
         }
         [HttpPost, ActionName("Delete")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             await _productService.Delete(id);
