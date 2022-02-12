@@ -1,0 +1,26 @@
+﻿@using CleanBase.Application.DTOs
+@model CategoryDTO
+@{
+    ViewData["Title"] = "Delete Categoria";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h4>Tem certeza que deseja Excluir?</h4>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+    <div class="col-md-offset-2 col-md-10">
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            <a asp-action="Index" class="btn btn-info">Voltar</a>
+        </form>
+    </div>
+</div>
