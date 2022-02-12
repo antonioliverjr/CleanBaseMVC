@@ -8,7 +8,7 @@ namespace CleanBase.Application.Interfaces
     {
         Task<IEnumerable<ProductDTO>> GetProducts();
         Task<ProductDTO> GetProductId(int? id);
-        Task<ProductDTO> GetProductCategory(int? id);
+        //Task<ProductDTO> GetProductCategory(int? id);
         Task Create(ProductDTO product);
         Task Update(ProductDTO product);
         Task Delete(int? id);

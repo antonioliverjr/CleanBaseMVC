@@ -49,17 +49,17 @@ namespace CleanBase.Application.Services
             return _mapper.Map<ProductDTO>(result);
         }
 
-        public async Task<ProductDTO> GetProductCategory(int? id)
-        {
-            //var productEntity = await _productRepository.GetProductCategory(id);
-            var productQuery = new GetProductIdQuery(id.Value);
-            if (productQuery == null)
-            {
-                throw new Exception("Entidade não carregada.");
-            }
-            var result = await _mediator.Send(productQuery);
-            return _mapper.Map<ProductDTO>(productQuery);
-        }
+        //public async Task<ProductDTO> GetProductCategory(int? id)
+        //{
+        //    //var productEntity = await _productRepository.GetProductCategory(id);
+        //    var productQuery = new GetProductIdQuery(id.Value);
+        //    if (productQuery == null)
+        //    {
+        //        throw new Exception("Entidade não carregada.");
+        //    }
+        //    var result = await _mediator.Send(productQuery);
+        //    return _mapper.Map<ProductDTO>(productQuery);
+        //}
 
         public async Task Create(ProductDTO product)
         {

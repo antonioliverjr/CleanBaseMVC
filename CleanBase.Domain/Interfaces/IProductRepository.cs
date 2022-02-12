@@ -8,7 +8,7 @@ namespace CleanBase.Domain.Interfaces
     {
         Task<IEnumerable<Product>> GetProducts();
         Task<Product> GetProductId(int? id);
-        Task<Product> GetProductCategory(int? id);
+        //Task<Product> GetProductCategory(int? id);
         Task<Product> Create(Product product);
         Task<Product> Update(Product product);
         Task<Product> Delete(Product product);

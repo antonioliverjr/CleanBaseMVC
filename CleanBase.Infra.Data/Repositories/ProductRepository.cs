@@ -29,14 +29,15 @@ namespace CleanBase.Infra.Data.Repositories
             return product;
         }
 
-        public async Task<Product> GetProductCategory(int? id)
-        {
-            return await _productContext.Products.Include(x => x.Category).SingleOrDefaultAsync(p => p.CategoryId == id);
-        }
+        //public async Task<Product> GetProductCategory(int? id)
+        //{
+        //    return await _productContext.Products.Include(x => x.Category).SingleOrDefaultAsync(p => p.CategoryId == id);
+        //}
 
         public async Task<Product> GetProductId(int? id)
         {
-            return await _productContext.Products.FindAsync(id);
+            //return await _productContext.Products.FindAsync(id);
+            return await _productContext.Products.Include(x => x.Category).SingleOrDefaultAsync(p => p.CategoryId == id);
         }
 
         public async Task<IEnumerable<Product>> GetProducts()
