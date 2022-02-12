@@ -1,5 +1,4 @@
-﻿@using CleanBase.Application.DTOs
-@model IEnumerable<ProductDTO>
+﻿@model IEnumerable<ProductDTO>
 
 @{
     ViewData["Title"] = "Gerenciador de Produtos";
@@ -51,13 +50,13 @@
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-ip="@item.Id" title="Edit" class="btn btn-warning">
+                    <a asp-action="Edit" asp-route-id="@item.Id" title="Edit" class="btn btn-warning">
                         <span class="fas fa-edit">Edit</span>
                     </a>
-                    <a asp-action="Details" asp-route-ip="@item.Id" title="Details" class="btn btn-info">
+                    <a asp-action="Details" asp-route-id="@item.Id" title="Details" class="btn btn-info">
                         <span class="fas fa-search">Details</span>
                     </a>
-                    <a asp-action="Delete" asp-route-ip="@item.Id" title="Delete" class="btn btn-danger">
+                    <a asp-action="Delete" asp-route-id="@item.Id" title="Delete" class="btn btn-danger">
                         <span class="fas fa-trash-alt">Delete</span>
                     </a>
                 </td>
