@@ -1,12 +1,13 @@
-﻿using CleanBase.Domain.Entities;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
-namespace CleanBase.Application.DTOs
+namespace CleanBase.API.ViewModels
 {
-    public class ProductDTO
+    public class ProductInput
     {
+        [JsonIgnore]
         public int Id { get; set; }
         [Required(ErrorMessage = "Nome é Requerido")]
         [StringLength(100, ErrorMessage = "Tamanho do Nome deve ser entre 3 à 100 caracteres.", MinimumLength = 3)]
@@ -29,8 +30,6 @@ namespace CleanBase.Application.DTOs
         [MaxLength(250, ErrorMessage = "Nome da Imagem deve ter até 250 caracteres.")]
         [Display(Name = "Imagem Produto")]
         public string Image { get; set; }
-        [JsonIgnore]
-        public Category Category { get; set; }
         [Display(Name = "Categoria")]
         public int CategoryId { get; set; }
     }
