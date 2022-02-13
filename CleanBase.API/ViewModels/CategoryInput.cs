@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace CleanBase.Application.DTOs
+namespace CleanBase.API.ViewModels
 {
-    public class CategoryDTO
+    public class CategoryInput
     {
+        [JsonIgnore]
         public int Id { get; set; }
         [Required(ErrorMessage = "Nome é Requerido")]
         [StringLength(100, ErrorMessage = "Tamanho do Nome deve ser entre 3 à 100 caracteres.", MinimumLength = 3)]
