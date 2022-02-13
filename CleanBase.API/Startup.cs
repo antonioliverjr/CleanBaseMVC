@@ -21,11 +21,9 @@ namespace CleanBase.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddInfrastructureApi(Configuration);
+            services.AddInfrastructureJwt(Configuration);
+            services.AddInfrastructureSwagger();
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CleanBase.API", Version = "v1" });
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,9 +37,9 @@ namespace CleanBase.API
             }
 
             app.UseHttpsRedirection();
-
+            app.UseStatusCodePages();
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
